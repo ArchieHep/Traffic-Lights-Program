@@ -28,12 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            pb_canvas = new PictureBox();
+            tmr_changeLight = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)pb_canvas).BeginInit();
+            SuspendLayout();
+            // 
+            // pb_canvas
+            // 
+            pb_canvas.Location = new Point(-1, 1);
+            pb_canvas.Name = "pb_canvas";
+            pb_canvas.Size = new Size(807, 453);
+            pb_canvas.TabIndex = 0;
+            pb_canvas.TabStop = false;
+            pb_canvas.Paint += pb_canvas_Paint;
+            // 
+            // tmr_changeLight
+            // 
+            tmr_changeLight.Enabled = true;
+            tmr_changeLight.Interval = 1000;
+            tmr_changeLight.Tick += tmr_changeLight_Tick;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(pb_canvas);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pb_canvas).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pb_canvas;
+        private System.Windows.Forms.Timer tmr_changeLight;
     }
 }
