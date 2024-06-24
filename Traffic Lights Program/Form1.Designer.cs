@@ -46,7 +46,7 @@
             // tmr_changeLight
             // 
             tmr_changeLight.Enabled = true;
-            tmr_changeLight.Interval = 1000;
+            tmr_changeLight.Interval = 4000;
             tmr_changeLight.Tick += tmr_changeLight_Tick;
             // 
             // Form1

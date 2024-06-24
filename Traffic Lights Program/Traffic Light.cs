@@ -35,7 +35,7 @@ namespace Traffic_Lights_Program
                     break;
 
                 case 1:
-                    _red.IsOn = false;
+                    _red.IsOn = true;
                     _amber.IsOn = true;
                     _green.IsOn = false;
                     _state = 2;
